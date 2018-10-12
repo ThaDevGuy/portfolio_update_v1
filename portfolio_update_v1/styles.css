@@ -7,9 +7,9 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Krub', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #caeefc;
 }
 /* Link Styles */
 
@@ -25,7 +25,7 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: #494949;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -55,9 +55,17 @@ a:hover {
   color: white
 }
 
+h1,
+h2,
+.nav li {
+  font-family: 'Niramit', sans-serif;
+}
+
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: linear-gradient(lightblue, transparent 75%),
+              linear-gradient(0deg, #caeefc, transparent),
+              url('images/background.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -71,13 +79,13 @@ header .profile-image {
   height: 150px;
   border-radius: 50%;
   border: 3px solid white;
-  transition: all .5s;
+  transition: all 1s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(360deg);
 }
 .tag {
-  background-color: #efefef;
+  background-color: #fff;
   color: black;
   padding: 10px;
   border-radius: 5px;
@@ -85,11 +93,11 @@ header .profile-image:hover {
   margin: 10px auto;
 } 
 .location {
-  background-color: #222;
+  background-color: #494949;
   color: yellow;
 }
 .card {
-  margin: 30px;
+  margin: 30px auto; /*changed value from 30px to solve margin indifference at screen >560px <700px */
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
@@ -162,6 +170,7 @@ a.github {
 }
 a.social:hover {
   opacity: 1;
+  transform: scale(1.4)
 }
 .clearfix {
   clear: both;
@@ -193,6 +202,10 @@ a.social:hover {
     padding-top: 20px;
   }
 
+  .card {
+    margin: 30px;
+  }
+
   main p {
     line-height: 1.6em;
   }
@@ -205,3 +218,9 @@ a.social:hover {
 
 }
 
+/*Styles for screen btn 560px - 720px margin indifference */
+@media screen and (max-width: 560px) {
+  .card {
+    margin: 30px;
+  }
+}
