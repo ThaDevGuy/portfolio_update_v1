@@ -84,6 +84,28 @@ header .profile-image {
 header .profile-image:hover {
   transform: scale(1.2) rotate(360deg);
 }
+.heading {
+  overflow: hidden; 
+}
+.heading h2 {
+  margin-top: 75px;
+}
+
+.heading h3 {
+  margin-top: -15px;
+  text-decoration: underline;
+}
+
+.gallery img {
+  width: 100%;
+  border: 1px #222 solid;
+  border-radius: 20px;
+}
+
+.gallery figure {
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+}
 .tag {
   background-color: #fff;
   color: black;
@@ -204,6 +226,14 @@ a.social:hover {
 
   .card {
     margin: 30px;
+  }
+
+  .gallery {
+    margin: 0 10%;
+  }
+
+  .gallery figure {
+    font-size: 1rem;
   }
 
   main p {
